@@ -1,0 +1,122 @@
+  2           0 LOAD_CONST               0 (<code object add at 0x000001DFC10E7B50, file "<string>", line 2>)
+              2 LOAD_CONST               1 ('add')
+              4 MAKE_FUNCTION            0
+              6 STORE_NAME               0 (add)
+
+  5           8 LOAD_CONST               2 (<code object subtract at 0x000001DFC10E6B80, file "<string>", line 5>)
+             10 LOAD_CONST               3 ('subtract')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               1 (subtract)
+
+  8          16 LOAD_CONST               4 (<code object multiply at 0x000001DFC10E6D90, file "<string>", line 8>)
+             18 LOAD_CONST               5 ('multiply')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               2 (multiply)
+
+ 11          24 LOAD_CONST               6 (<code object divide at 0x000001DFC10E7730, file "<string>", line 11>)
+             26 LOAD_CONST               7 ('divide')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               3 (divide)
+
+ 18          32 LOAD_NAME                4 (__name__)
+             34 LOAD_CONST               8 ('__main__')
+             36 COMPARE_OP               2 (==)
+             38 POP_JUMP_IF_FALSE       74 (to 148)
+
+ 19          40 LOAD_CONST               9 (10)
+             42 STORE_NAME               5 (num1)
+
+ 20          44 LOAD_CONST              10 (5)
+             46 STORE_NAME               6 (num2)
+
+ 22          48 LOAD_NAME                7 (print)
+             50 LOAD_CONST              11 ('Numbers: ')
+             52 LOAD_NAME                5 (num1)
+             54 LOAD_NAME                6 (num2)
+             56 CALL_FUNCTION            3
+             58 POP_TOP
+
+ 25          60 LOAD_NAME                7 (print)
+             62 LOAD_CONST              12 ('Addition: ')
+             64 LOAD_NAME                0 (add)
+             66 LOAD_NAME                5 (num1)
+             68 LOAD_NAME                6 (num2)
+             70 CALL_FUNCTION            2
+             72 CALL_FUNCTION            2
+             74 POP_TOP
+
+ 26          76 LOAD_NAME                7 (print)
+             78 LOAD_CONST              13 ('Subtraction: ')
+             80 LOAD_NAME                1 (subtract)
+             82 LOAD_NAME                5 (num1)
+             84 LOAD_NAME                6 (num2)
+             86 CALL_FUNCTION            2
+             88 CALL_FUNCTION            2
+             90 POP_TOP
+
+ 27          92 LOAD_NAME                7 (print)
+             94 LOAD_CONST              14 ('Multiplication: ')
+             96 LOAD_NAME                2 (multiply)
+             98 LOAD_NAME                5 (num1)
+            100 LOAD_NAME                6 (num2)
+            102 CALL_FUNCTION            2
+            104 CALL_FUNCTION            2
+            106 POP_TOP
+
+ 28         108 LOAD_NAME                7 (print)
+            110 LOAD_CONST              15 ('Division: ')
+            112 LOAD_NAME                3 (divide)
+            114 LOAD_NAME                5 (num1)
+            116 LOAD_NAME                6 (num2)
+            118 CALL_FUNCTION            2
+            120 CALL_FUNCTION            2
+            122 POP_TOP
+
+ 31         124 LOAD_CONST              16 (0)
+            126 STORE_NAME               8 (num3)
+
+ 32         128 LOAD_NAME                7 (print)
+            130 LOAD_CONST              17 ('Division with zero: ')
+            132 LOAD_NAME                3 (divide)
+            134 LOAD_NAME                5 (num1)
+            136 LOAD_NAME                8 (num3)
+            138 CALL_FUNCTION            2
+            140 CALL_FUNCTION            2
+            142 POP_TOP
+            144 LOAD_CONST              18 (None)
+            146 RETURN_VALUE
+
+ 18     >>  148 LOAD_CONST              18 (None)
+            150 RETURN_VALUE
+
+Disassembly of <code object add at 0x000001DFC10E7B50, file "<string>", line 2>:
+  3           0 LOAD_FAST                0 (a)
+              2 LOAD_FAST                1 (b)
+              4 BINARY_ADD
+              6 RETURN_VALUE
+
+Disassembly of <code object subtract at 0x000001DFC10E6B80, file "<string>", line 5>:
+  6           0 LOAD_FAST                0 (a)
+              2 LOAD_FAST                1 (b)
+              4 BINARY_SUBTRACT
+              6 RETURN_VALUE
+
+Disassembly of <code object multiply at 0x000001DFC10E6D90, file "<string>", line 8>:
+  9           0 LOAD_FAST                0 (a)
+              2 LOAD_FAST                1 (b)
+              4 BINARY_MULTIPLY
+              6 RETURN_VALUE
+
+Disassembly of <code object divide at 0x000001DFC10E7730, file "<string>", line 11>:
+ 12           0 LOAD_FAST                1 (b)
+              2 LOAD_CONST               1 (0)
+              4 COMPARE_OP               3 (!=)
+              6 POP_JUMP_IF_FALSE        8 (to 16)
+
+ 13           8 LOAD_FAST                0 (a)
+             10 LOAD_FAST                1 (b)
+             12 BINARY_TRUE_DIVIDE
+             14 RETURN_VALUE
+
+ 15     >>   16 LOAD_CONST               2 ('Division by zero is not allowed')
+             18 RETURN_VALUE
